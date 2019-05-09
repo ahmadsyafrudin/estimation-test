@@ -17,7 +17,7 @@ def estimate(request):
     if request.method == "POST":
 
         estimation = Estimation(json.loads(request.body).get("date"),
-                                          json.loads(request.body).get("estimation_type"))
+                                json.loads(request.body).get("estimation_type"))
         allowed, estimated, reason = estimation.estimate()
         response = {"delivery": estimation.delivery,
                     "return": estimation.pick_up
@@ -25,8 +25,10 @@ def estimate(request):
         if allowed:
             return JsonResponse(data=response.get(json.loads(request.body).get("estimation_type"))(),
                                 status=HTTPStatus.OK)
-        estimated = estimated.first().date.strftime("%A") if isinstance(estimated, QuerySet) else estimated
+        estimated = estimated.first().date.strftime("%A") if isinstance(estimated, QuerySet) else estimated.strftime(
+            "%A")
 
-        return JsonResponse(data={"message": f"can't order on {estimated}, because {reason}"}, status=HTTPStatus.BAD_REQUEST)
+        return JsonResponse(data={"message": f"can't order on {estimated}, because {reason}"},
+                            status=HTTPStatus.BAD_REQUEST)
     else:
         return JsonResponse(status=HTTPStatus.METHOD_NOT_ALLOWED)

@@ -27,7 +27,7 @@ class Estimation(object):
     def date_check(self):
         date_obj = parse(self.date)
         if self.weekend(date_obj):
-            return None, date_obj.day, "Weekend is not allowed"
+            return None, date_obj, "Weekend is not allowed"
 
         elif self.holiday(date_obj):
             return None, self.holiday(date_obj), self.holiday(date_obj).first().name

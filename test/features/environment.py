@@ -9,7 +9,6 @@ def before_all(context):
     call_command('loaddata', "test/fixtures/holiday")
 
 
-
 def before_scenario(context, scenario):
     use_fixture(django_test_case, context)
 

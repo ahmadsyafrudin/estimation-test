@@ -101,3 +101,35 @@ def step_impl(context, holiday_name):
     """
     assert context.response.status_code == HTTPStatus.BAD_REQUEST
     assert holiday_name in context.response.json().get("message")
+
+
+@given("client want to estimate weekend order on {date} at {hour}")
+def step_impl(context, date, hour):
+    """
+    :param hour: str
+    :param date: str
+    :type context: behave.runner.Context
+    """
+    context.estimation_type = "delivery"
+    context.date = parse(f"{date} {hour}").isoformat()
+
+
+@when("estimate for delivery on weekend")
+def step_impl(context):
+    """
+    :type context: behave.runner.Context
+    """
+    factory = Client()
+    context.response = factory.post("/estimate/", data={"date": context.date,
+                                                        "estimation_type": context.estimation_type},
+                                    content_type="application/json")
+
+
+@then("client can't do order on {weekend_day}")
+def step_impl(context, weekend_day):
+    """
+    :param weekend_day: str
+    :type context: behave.runner.Context
+    """
+    assert context.response.status_code == HTTPStatus.BAD_REQUEST
+    assert weekend_day in context.response.json().get("message")
