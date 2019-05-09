@@ -5,7 +5,6 @@ from django.db import models
 HOLIDAY_TYPE_CHOICES = (
     ('public', 'Public Holiday'),
     ('national', 'National Holiday'),
-    ('religion', 'Religion Holiday'),
 )
 
 
