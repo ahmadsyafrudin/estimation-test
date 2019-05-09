@@ -35,7 +35,7 @@ def step_impl(context, date, hour):
     :type context: behave.runner.Context
     """
     assert context.response.status_code == HTTPStatus.OK
-    assert context.response.json().get("pick_up") == parse(f"{date} {hour}").isoformat()
+    assert context.response.json().get("pickUp") == parse(f"{date} {hour}").isoformat()
 
 
 @given("client estimate return on {date} at {hour}")
