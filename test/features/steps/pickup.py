@@ -104,7 +104,7 @@ def step_impl(context, date, hour):
     assert context.response.json().get("processedAndUnbooked") == parse(f"{date} {hour}").isoformat()
 
 
-@given("client estimate on Election day on {day} at {hour}")
+@given("client estimate on Election day {day} at {hour}")
 def step_impl(context, day, hour):
     """
     :param hour: str
