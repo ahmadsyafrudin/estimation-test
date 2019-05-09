@@ -1,10 +1,9 @@
 from django.contrib import admin
 from django.urls import path
 
-from estimation.views import index, estimate
+from estimation.views import estimate
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index),
-    path('estimate/', estimate)
+    path('api/estimate/', estimate)
 ]

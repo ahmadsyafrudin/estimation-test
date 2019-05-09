@@ -44,7 +44,7 @@ class Estimation(object):
         if self.holiday(date_obj) or self.weekend(date_obj, pickup=pickup):
             for x in range(1, 6):
                 delta = relativedelta(days=x)
-                if not self.holiday(date_obj) or not self.weekend(date_obj, pickup=pickup):
+                if not self.weekend(date_obj+delta, pickup=pickup) and not self.holiday(date_obj+delta):
                     return date_obj+delta
         else:
             return date_obj
@@ -57,6 +57,7 @@ class Estimation(object):
     def weekend(self, date_obj, pickup=None):
         if pickup:
             return date_obj.strftime("%A") in self.NOT_ALLOWED_PICKUP
+
         return date_obj.strftime("%A") in self.NOT_ALLOWED
 
     def estimate(self, pickup=None):
@@ -79,6 +80,6 @@ class Estimation(object):
 
         return {
             "return": f"{estimate.isoformat()}",
-            "pick_up": f"{self.step_2.isoformat()}",
+            "pickUp": f"{self.step_2.isoformat()}",
             "processedAndUnbooked": f"{self.step_3.isoformat()}"
         }

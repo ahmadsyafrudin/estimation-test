@@ -22,8 +22,8 @@ def step_impl(context):
     :type context: behave.runner.Context
     """
     factory = Client()
-    context.response = factory.post("/estimate/", data={"date": context.date,
-                                                        "estimation_type": context.estimation_type},
+    context.response = factory.post("/api/estimate/", data={"dateTime": context.date,
+                                                            "estimationType": context.estimation_type},
                                     content_type="application/json")
 
 
@@ -55,8 +55,8 @@ def step_impl(context):
     :type context: behave.runner.Context
     """
     factory = Client()
-    context.response = factory.post("/estimate/", data={"date": context.date,
-                                                        "estimation_type": context.estimation_type},
+    context.response = factory.post("/api/estimate/", data={"dateTime": context.date,
+                                                            "estimationType": context.estimation_type},
                                     content_type="application/json")
 
 
@@ -88,8 +88,8 @@ def step_impl(context):
     :type context: behave.runner.Context
     """
     factory = Client()
-    context.response = factory.post("/estimate/", data={"date": context.date,
-                                                        "estimation_type": context.estimation_type},
+    context.response = factory.post("/api/estimate/", data={"dateTime": context.date,
+                                                            "estimationType": context.estimation_type},
                                     content_type="application/json")
 
 
@@ -120,8 +120,8 @@ def step_impl(context):
     :type context: behave.runner.Context
     """
     factory = Client()
-    context.response = factory.post("/estimate/", data={"date": context.date,
-                                                        "estimation_type": context.estimation_type},
+    context.response = factory.post("/api/estimate/", data={"dateTime": context.date,
+                                                            "estimationType": context.estimation_type},
                                     content_type="application/json")
 
 
