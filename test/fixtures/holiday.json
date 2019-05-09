@@ -1,0 +1,47 @@
+[
+{
+  "model": "estimation.holiday",
+  "pk": 1,
+  "fields": {
+    "date": "2019-01-01T00:00:00.133Z",
+    "name": "New Year's Day",
+    "holiday_type": "public"
+  }
+},
+{
+  "model": "estimation.holiday",
+  "pk": 2,
+  "fields": {
+    "date": "2019-02-05T00:00:00.551Z",
+    "name": "Chinese Lunar New Year's Day",
+    "holiday_type": "public"
+  }
+},
+{
+  "model": "estimation.holiday",
+  "pk": 4,
+  "fields": {
+    "date": "2019-03-07T00:00:00.940Z",
+    "name": "Bali's Day of Silence and Hindu New Year",
+    "holiday_type": "public"
+  }
+},
+{
+  "model": "estimation.holiday",
+  "pk": 5,
+  "fields": {
+    "date": "2019-04-03T00:00:00.051Z",
+    "name": "Ascension of the Prophet Muhammad",
+    "holiday_type": "public"
+  }
+},
+{
+  "model": "estimation.holiday",
+  "pk": 6,
+  "fields": {
+    "date": "2019-04-17T00:00:00.932Z",
+    "name": "Election Day",
+    "holiday_type": "public"
+  }
+}
+]
