@@ -115,7 +115,8 @@ Example Response:
 
 
 supported estimationType: "delivery", "return"
-supported date type:
+
+supported dateTime : ISO-8601
 
 TODO:
 -----
