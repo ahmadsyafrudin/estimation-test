@@ -19,10 +19,10 @@ Feature: Pickup estimation feature
 
   Scenario: Holiday Doesnt allow for processing
     Given client estimate two days before Election day on 15 April 2019 at 13:00:00 GMT+7
-    When estimate for pickup on Tuesday
+    When estimate for return on Monday and pickup on Tuesday
     Then client get estimation for pickup and unbooked on 18 April 2019 at 13:00:00 GMT+7
 
   Scenario: Holiday Doesnt allow for return estimation
     Given client estimate on Election day on 17 April 2019 at 13:00:00 GMT+7
-    When estimate for pickup and unbooked on Thursday
+    When estimate for return on Wednesday
     Then client  cant get estimation for pickup and unbooked Because its Election Day

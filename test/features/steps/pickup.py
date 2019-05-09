@@ -82,7 +82,7 @@ def step_impl(context, date, hour):
     context.date = parse(f"{date} {hour}").isoformat()
 
 
-@when("estimate for pickup on Tuesday")
+@when("estimate for return on Monday and pickup on Tuesday")
 def step_impl(context):
     """
     :type context: behave.runner.Context
@@ -115,7 +115,7 @@ def step_impl(context, day, hour):
     context.date = parse(f"{day} {hour}").isoformat()
 
 
-@when("estimate for pickup and unbooked on Thursday")
+@when("estimate for return on Wednesday")
 def step_impl(context):
     """
     :type context: behave.runner.Context
