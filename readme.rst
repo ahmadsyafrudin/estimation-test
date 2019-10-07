@@ -12,7 +12,21 @@ install requirements:
 
 .. code::
 
-    pipenv install
+    pip install -r requirements.txt
+
+adding new package requirement, add new line install_requires on setup.cfg and then run:
+
+.. code::
+
+    install_requires =
+        django
+        psycopg2-binary
+        python-dateutil
+        <<---Add-new-package-here--->>
+
+.. code::
+
+    pip-compile --generate-hashes requirements.txt
 
 run docker-compose for database:
 
@@ -25,12 +39,6 @@ to run it in the background use options -d:
 .. code::
 
     docker-compose up -d
-
-Spawns a shell within the virtualenv.
-
-.. code::
-
-    pipenv shell
 
 migrate database
 
