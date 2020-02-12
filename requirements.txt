@@ -4,9 +4,9 @@
 #
 #    pip-compile --generate-hashes requirements.txt
 #
-django==2.2.6 \
-    --hash=sha256:4025317ca01f75fc79250ff7262a06d8ba97cd4f82e93394b2a0a6a4a925caeb \
-    --hash=sha256:a8ca1033acac9f33995eb2209a6bf18a4681c3e5269a878e9a7e0b7384ed1ca3
+django==2.2.10 \
+    --hash=sha256:9a4635813e2d498a3c01b10c701fe4a515d76dd290aaa792ccb65ca4ccb6b038 \
+    --hash=sha256:1226168be1b1c7efd0e66ee79b0e0b58b2caa7ed87717909cd8a57bb13a7079a
 psycopg2-binary==2.8.3 \
     --hash=sha256:080c72714784989474f97be9ab0ddf7b2ad2984527e77f2909fcd04d4df53809 \
     --hash=sha256:110457be80b63ff4915febb06faa7be002b93a76e5ba19bf3f27636a2ef58598 \
