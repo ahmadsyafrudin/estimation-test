@@ -1,19 +1,18 @@
 language: python
 python:
     - "3.8"
-    
+env:
+    - DB_PORT=5432    
 services:
     - postgresql
 before_script:
-    - psql -c "CREATE ROLE borrowborrow WITH CREATEDB LOGIN PASSWORD 'borrowborrow';" -U postgres
+    - psql -c "CREATE ROLE borrowborrow WITH CREATEDB LOGIN PASSWORD 'mypassword';" -U postgres
     - psql -c "CREATE DATABASE borrowborrow;" -U postgres
     - psql -c "GRANT ALL PRIVILEGES ON DATABASE borrowborrow TO borrowborrow;" -U postgres
-
 install:
     - curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
     - pip install -r requirements.txt
     - $HOME/.poetry/bin/poetry install
-    
 # command to run tests
 script:
     - behave tests/features
