@@ -82,7 +82,7 @@ typed-ast = ">=1.4.0"
 d = ["aiohttp (>=3.3.2)", "aiohttp-cors"]
 
 [[package]]
-category = "main"
+category = "dev"
 description = "Version-bump your software with a single command!"
 name = "bump2version"
 optional = false
@@ -90,7 +90,7 @@ python-versions = ">=3.5"
 version = "1.0.0"
 
 [[package]]
-category = "main"
+category = "dev"
 description = "Version-bump your software with a single command!"
 name = "bumpversion"
 optional = false
@@ -410,7 +410,7 @@ python-versions = "*"
 version = "1.12.1"
 
 [metadata]
-content-hash = "93e8fff5b99db569d1bacd1d60d430954152e5fca7d8c8f3fe3ae8590f3e80a8"
+content-hash = "b573a57d3e64765f1f244f75f948851ed6c1fe7ed749cfbad1be5a3920e3376a"
 python-versions = "^3.8"
 
 [metadata.files]
