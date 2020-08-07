@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "estimation-test"
-version = "0.8.0"
+version = "0.9.0"
 description = "Estimation Test Repo"
 authors = ["ahmadsyafrudin <sfrmd4@gmail.com>"]
 license = "MIT"
