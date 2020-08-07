@@ -5,8 +5,8 @@ this project is for testing purpose, using python version : 3.7
 
 How to run locally
 ##################
-Install `pipenv
-<https://docs.pipenv.org/en/latest/install/>`_
+Install `poetry
+<https://python-poetry.org/docs/#installation>`_
 
 install requirements:
 
@@ -26,7 +26,7 @@ adding new package requirement, add new line install_requires on setup.cfg and t
 
 .. code::
 
-    pip-compile --generate-hashes requirements.txt
+    poetry export -f requirements.txt --without-hashes > requirements.txt
 
 run docker-compose for database:
 
