@@ -1,4 +1,7 @@
-API FOR ESTIMATE(:WIP)
+.. image:: https://travis-ci.com/ahmadsyafrudin/estimation-test.svg?branch=master
+    :target: https://travis-ci.com/ahmadsyafrudin/estimation-test
+
+PI FOR ESTIMATE(:WIP)
 ######################
 
 this project is for testing purpose, using python version : 3.7
