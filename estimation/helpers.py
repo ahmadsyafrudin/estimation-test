@@ -49,7 +49,8 @@ class Estimation(object):
         else:
             return date_obj
 
-    def holiday(self, date_obj):
+    @staticmethod
+    def holiday(date_obj):
         return Holiday.objects.filter(date__year=date_obj.year,
                                       date__day=date_obj.day,
                                       date__month=date_obj.month)

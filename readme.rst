@@ -4,7 +4,7 @@
 PI FOR ESTIMATE(:WIP)
 ######################
 
-this project is for testing purpose, using python version : 3.7
+this project is for testing purpose, using python version : 3.8
 
 How to run locally
 ##################
@@ -26,6 +26,12 @@ adding new package requirement, add new line install_requires on setup.cfg and t
         psycopg2-binary
         python-dateutil
         <<---Add-new-package-here--->>
+
+.. code::
+
+    poetry add <<package_name>>
+
+and create a new requirements.txt
 
 .. code::
 
@@ -94,7 +100,7 @@ Response:
     }
 
 
-example for return:
+example Request:
 
 .. code-block::
 
@@ -131,5 +137,5 @@ supported dateTime : ISO-8601
 
 TODO:
 -----
-- input all holiday data on year 2019
+- input all holiday data on year current year
 - refactor unused function on helpers Estimate Object
