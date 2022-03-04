@@ -17,7 +17,7 @@ black = "^19.10b0"
 docutils = "^0.16"
 flake8 = "^3.8.3"
 codecov = "^2.1.8"
-pygments = "^2.6.1"
+pygments = "^2.7.4"
 pylint = "^2.5.3"
 bumpversion = "^0.6.0"
 
